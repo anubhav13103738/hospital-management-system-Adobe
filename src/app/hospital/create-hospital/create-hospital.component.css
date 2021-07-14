@@ -1,0 +1,11 @@
+table,
+tr,
+td,
+input {
+  width: 50%;
+  margin: auto;
+}
+
+mat-icon {
+  cursor: pointer;
+}

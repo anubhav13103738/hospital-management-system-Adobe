@@ -1,0 +1,43 @@
+<div class="title">
+  <h1 class="title-heading">Department List</h1>
+</div>
+<div class="sort-btn">
+  <button mat-raised-button class="btn-color" (click)="sort()">
+    Sort by Department name
+  </button>
+  <button mat-raised-button class="btn-color" routerLink="/">Back</button>
+</div>
+
+<table *ngIf="departments.length > 0" class="department-list">
+  <tr>
+    <th>Department Name</th>
+    <th>Head of Department</th>
+    <th>Contact Number</th>
+    <th>Hospital</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let department of departments">
+    <td>{{ department.departmentname }}</td>
+    <td>{{ department.head }}</td>
+    <td>{{ department.contactnumber }}</td>
+    <td>{{ department.hospitalname }}</td>
+    <td>
+      <a
+        mat-button
+        color="accent"
+        [routerLink]="['/departments', 'edit', department._id]"
+        >Edit</a
+      >
+    </td>
+    <td>
+      <button mat-button color="warn" (click)="onDelete(department._id)">
+        Delete
+      </button>
+    </td>
+  </tr>
+</table>
+
+<p class="info-text mat-body-1" *ngIf="departments.length <= 0">
+  No departments to display
+</p>

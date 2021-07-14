@@ -1,0 +1,54 @@
+<form (submit)="save(hospitalForm)" #hospitalForm="ngForm">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label>Hospital Name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="hospitalName"
+            [ngModel]="hospital?.hospitalname"
+            required
+            #hospitalName="ngModel"
+          />
+          <mat-error *ngIf="hospitalName.invalid"
+            >Please enter Hospital Name</mat-error
+          >
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Hospital Contact</mat-label>
+          <input
+            matInput
+            type="text"
+            name="hospitalContact"
+            [ngModel]="hospital?.contactnumber"
+            required
+            minlength="6"
+            maxlength="10"
+            pattern="\d*"
+            #hospitalContact="ngModel"
+          />
+          <mat-error *ngIf="hospitalContact.invalid"
+            >Please enter contact number min 6 digits and max 10
+            digits</mat-error
+          >
+        </mat-form-field>
+      </td>
+      <td>
+        <button mat-icon-button type="submit">
+          <mat-icon aria-hidden="false" aria-label="save icon">save</mat-icon>
+        </button>
+      </td>
+      <td>
+        <button mat-icon-button (click)="remove(hospitalForm)">
+          <mat-icon aria-hidden="false" aria-label="delete icon"
+            >delete</mat-icon
+          >
+        </button>
+      </td>
+    </tr>
+  </table>
+</form>

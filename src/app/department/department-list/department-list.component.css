@@ -1,0 +1,41 @@
+.btn-color {
+  background-color: green;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.title {
+  width: 30%;
+  height: 4rem;
+  margin: auto;
+  background-color: lightgray;
+}
+
+.title-heading {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.department-list {
+  margin: auto;
+}
+
+td {
+  padding: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(122, 48, 242, 1);
+}
+
+.sort-btn {
+  margin-top: 1rem;
+  padding-left: 7rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.info-text {
+  text-align: center;
+}

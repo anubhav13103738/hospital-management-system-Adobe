@@ -1,0 +1,40 @@
+<div class="title">
+  <h1 class="title-heading">Hospital List</h1>
+</div>
+<div class="sort-btn">
+  <button mat-raised-button class="btn-color" (click)="sort()">
+    Sort by Hospital name
+  </button>
+</div>
+
+<table *ngIf="hospitals.length > 0" class="hospital-list">
+  <tr>
+    <th>Hospital Name</th>
+    <th>Contact Number</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let hospital of hospitals">
+    <td>{{ hospital.hospitalname }}</td>
+    <td>{{ hospital.contactnumber }}</td>
+    <td><a [routerLink]="['/departments', hospital?.hospitalname]">View</a></td>
+    <td>
+      <a
+        mat-button
+        color="accent"
+        [routerLink]="['/hospitals', 'edit', hospital._id]"
+        >Edit</a
+      >
+    </td>
+    <td>
+      <button mat-button color="warn" (click)="onDelete(hospital._id)">
+        Delete
+      </button>
+    </td>
+  </tr>
+</table>
+
+<p class="info-text mat-body-1" *ngIf="hospitals.length <= 0">
+  No hospitals to display
+</p>

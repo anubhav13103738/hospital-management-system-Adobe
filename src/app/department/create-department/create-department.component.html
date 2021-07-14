@@ -1,0 +1,86 @@
+<form (submit)="save(departmentForm)" #departmentForm="ngForm">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label>Department Name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="departmentName"
+            [ngModel]="department?.departmentname"
+            required
+            #departmentName="ngModel"
+          />
+          <mat-error *ngIf="departmentName.invalid"
+            >Please enter Department Name</mat-error
+          >
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Head of Department</mat-label>
+          <input
+            matInput
+            type="text"
+            name="HODName"
+            [ngModel]="department?.head"
+            required
+            #hodName="ngModel"
+          />
+          <mat-error *ngIf="hodName.invalid"
+            >Please enter Head of Department Name</mat-error
+          >
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Contact</mat-label>
+          <input
+            matInput
+            type="text"
+            name="departmentContact"
+            [ngModel]="department?.contactnumber"
+            required
+            minlength="6"
+            maxlength="10"
+            pattern="\d*"
+            #departmentContact="ngModel"
+          />
+          <mat-error *ngIf="departmentContact.invalid"
+            >Please enter Department Contact</mat-error
+          >
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label>Hospital Name</mat-label>
+          <input
+            matInput
+            type="text"
+            name="hospitalName"
+            [ngModel]="department?.hospitalname"
+            required
+            #hospitalName="ngModel"
+            [disabled]="disableHname"
+          />
+          <mat-error *ngIf="hospitalName.invalid"
+            >Please enter Hospital Name</mat-error
+          >
+        </mat-form-field>
+      </td>
+      <td>
+        <button mat-icon-button type="submit">
+          <mat-icon aria-hidden="false" aria-label="save icon">save</mat-icon>
+        </button>
+      </td>
+      <td>
+        <button mat-icon-button (click)="remove(departmentForm)">
+          <mat-icon aria-hidden="false" aria-label="delete icon"
+            >delete</mat-icon
+          >
+        </button>
+      </td>
+    </tr>
+  </table>
+</form>

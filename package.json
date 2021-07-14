@@ -7,19 +7,26 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start-server": "nodemon ./backend/server.js"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.1",
+    "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.1",
     "@angular/compiler": "~9.1.1",
     "@angular/core": "~9.1.1",
     "@angular/forms": "~9.1.1",
+    "@angular/material": "^9.2.4",
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
     "rxjs": "~6.5.4",
+    "short-uuid": "^4.2.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

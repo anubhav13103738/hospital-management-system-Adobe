@@ -1,0 +1,10 @@
+.footer-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100%;
+  z-index: 1000;
+}
+
+.footer-title {
+  margin: auto;
+}
