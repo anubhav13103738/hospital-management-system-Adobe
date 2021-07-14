@@ -1,11 +1,12 @@
 # HospitalManagementSystem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
-
-## Development server
-
 Problem statement of this task is attached in the Repo namely Angular Assessment.pdf. Also, attaching a gif of working application 
 ![](hospital-management-system.gif)
+
+# Structure
+
+All the backend related Node/Express code is kept inside backend folder. It contains all the rest APIs and the server.
+Root folder has front end angular code.
 
 ## Next steps
 
@@ -16,8 +17,8 @@ Problem statement of this task is attached in the Repo namely Angular Assessment
 ## How to start
 1. Clone this repo
 2. Install all packages using command 'npm install' in cmd or terminal where package.json file is present outside of backend directory.
-3. Open terminal/cmd and run command ng serve to compile and load front end. This will run on http://localhost:4200 (development server). This will be the address you need to open to see the live application.
-4. Open another terminal/cmd and run command npm run start-server to execute backend API system.
+3. Open terminal/cmd and run command 'ng serve' outside of backend directory to compile and load front end. This will run on http://localhost:4200 (development server). This will be the address you need to open to see the live application.
+4. Open another terminal/cmd and run command 'npm run start-server' outside of backend directory to execute backend API system.
 
 ## Development server
 
