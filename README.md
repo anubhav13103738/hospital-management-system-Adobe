@@ -5,7 +5,7 @@ Problem statement of this task is attached in the Repo namely Angular Assessment
 
 # Structure
 
-All the backend related Node/Express code is kept inside backend folder. It contains all the rest APIs and the server.
+All the backend related Node/Express code is kept inside backend folder. It contains all the rest APIs and the server which runs on port 3000 http://localhost:3000
 Root folder has front end angular code.
 
 ## Next steps
